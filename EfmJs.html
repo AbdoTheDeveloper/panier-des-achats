@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="EfmStyle.css">
+        <link rel="icon" href="../Efm/images/img1.png">
+        <script src="Efm.js"></script>
+        
+    </head>
+    <body>
+        <main>
+            <section>
+                <fieldset>
+                    <legend><h1>Gestion de Commandes</h1></legend>
+                    <h2>Commandes des Consoles</h2>
+                    <strong><label for="select" style="color: black;">Consoles : </label></strong><br><br>
+                    <select style="color: chartreuse;" id="select">
+                        <option >choisir une console</option>
+                    </select><br> <br> <span class="errors"></span><br><br>
+                    <label for="ht">Quantité: </label><input value="1" type="number" ><br><br>
+
+                    <span class="errors"></span><br><br><br>
+                    <a><button style="margin-top:-30px;">Ajouter au panier</button></a><br><br>
+                    <h2>Panier des Commandes</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>REFERENCE</th>
+                                <th>QUANTITE</th>
+                                <th>IMAGE</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+
+                        </tbody>
+                    </table><br><br>
+                    <label for="ht">Total HT:</label><input  id="ht" value="0 Dhs" type="text" disabled><br><br>
+                    <label for="ttc">Total TTC:</label><input  id="ttc"   id=""value="0 Dhs" type="text" disabled><br><br>
+                    <input  type="button"  value="Commander">
+                    
+                </fieldset>
+            </section>
+        </main>
+    </body>
+
+
+    
+</html>
