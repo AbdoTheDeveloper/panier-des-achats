@@ -1,7 +1,7 @@
 /*<script src="../../Jquery/TPS/Montre analogique/TP_montre_analogique_files/jquery-3.6.0.min.js">
     
 </script>*/
-// Dans cette Correction on va trailler avec la bibliothéque Jquery
+// Dans cette Correction on va travailler avec la bibliothéque Jquery
 
 $(document).ready(function () {
   $("label,select,table,input,button").hide().show(2000);
