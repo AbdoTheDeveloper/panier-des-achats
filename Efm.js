@@ -10,9 +10,8 @@ $(document).ready(function () {
   var qt = $("input[type = number]:nth-of-type(1)");
 
   // Q2) Ecrire une fonction de validation des champs Console et quantité
+    
   // ====================================================== Fonction de valdation ======================================================
-
-  ;
   function validate() {
     Errors = { console: "", quntité: "" }
     si_commande_valide = true;
@@ -23,10 +22,9 @@ $(document).ready(function () {
     // controle de valeurs saisies
     if (selected_value == "choisir une console") {
       // affichge d'un message d'erreur
-      // window.alert('choisir une console !!!')
-      si_commande_valide = false;
-      Errors.console = "vous devez choisir un  console valide ";
-      $(".errors:first-of-type").html(Errors.console)
+        Errors.console = "vous devez choisir un  console valide ";
+        $(".errors:first-of-type").html(Errors.console)
+        si_commande_valide = false;
     }else{
         Errors.console = "";
         $(".errors:first-of-type").html(Errors.console);
@@ -45,7 +43,7 @@ $(document).ready(function () {
   // attachement de gestionnaires d'évenement
   $("button:nth-of-type(1)").click(validate);
 
-  /* Q3) Ecrire une fonction remplirConsole qui permet de remplir le Dropdown des consoles à partir
+  /* Q3) Ecrire une fonction FillConsole qui permet de remplir le Dropdown des consoles à partir
 des données Json ci-dessous 
 ===================================================== Fonction remplirConsole =====================================================
 
@@ -53,7 +51,7 @@ des données Json ci-dessous
 
   var Commandes;
 
-  function remplirConsole() {
+  function FillConsole() {
     var JsonData = `{
         "consoles":[
             {"ref":"NINTENDO SWITH OLED","prix":4500,"mannettes":2,"image":"./images/img1.png"},
@@ -63,9 +61,9 @@ des données Json ci-dessous
         ]
     }
     `;
-    //   conversion des JSON au javascript
+    //   conversion du JSON au javascript
     Commandes = JSON.parse(JsonData);
-    // Ajoute des références au Dropdown
+    // Ajout des références au Dropdown
     $.each(Commandes.consoles, (index, element) => {
       Dropdown.append(
         $(`<option style="color=chartreuse;" >${element.ref}</option>`) 
@@ -73,7 +71,7 @@ des données Json ci-dessous
     });
   }
   // appelle  brut de la fonction
-  remplirConsole();
+  FillConsole();
 
   /* Q4) Ecrire une fonction addConsoleToCart qui permet d'ajouter la console sélectionnée dans 
 le tableau 'Panier des commandes' 
